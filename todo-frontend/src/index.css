@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Left Panel - Task Form */
+/* Form Group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-panel {
+  width: 35%;
+  background: white;
+  padding: 50px 40px;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-panel h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.form-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-panel input,
+.form-panel textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+  resize: none;
+  background: #fafafa;
+}
+
+.form-panel input:focus,
+.form-panel textarea:focus {
+  border-color: #4a90e2;
+  background: white;
+}
+
+.form-panel button {
+  align-self: center;
+  padding: 10px 40px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-panel button:hover {
+  background-color: #357abd;
+}
+
+.form-panel button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Right Panel - Task Cards */
+.tasks-panel {
+  width: 65%;
+  background: white;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+/* Task Card */
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: gainsboro;;
+  border-radius: 10px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+}
+
+/* Completing animation */
+.task-card.completing {
+  background: #f0fff4;
+  border-color: #86efac;
+}
+
+.task-card.completing h3 {
+  color: #16a34a;
+}
+
+.task-card.completing p {
+  color: #16a34a;
+}
+
+.task-card.completing .done-btn {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: white;
+}
+
+.task-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.task-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.done-btn {
+  padding: 8px 20px;
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  margin-left: 20px;
+}
+
+.done-btn:hover {
+  background-color: #16a34a;
+  border-color: #16a34a;
+  color: white;
+}
+
+.done-btn:disabled {
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
